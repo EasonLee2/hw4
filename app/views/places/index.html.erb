@@ -1,19 +1,25 @@
+<div class="ms-2 mb-3">
 <h1>Places</h1>
+</div>
 
 <% if @current_user %>
 
   <ul>
     <% for place in @places %>
+      <div class="ms-2 mb-2">
       <li><a href="/places/<%= place["id"] %>"><%= place["name"] %></a></li>
+      </div>
     <% end %>
   </ul>
 
-  <p>
-    <a href="/places/new">New place</a>
-  </p>
+  <div class="ms-2 mb-3">
+    <a href="/places/new" class="btn btn-primary">New place</a>
+  </div>
 
 <% else %>
 
+  <div class="ms-2 mb-3">
   <p> Please login first to view places </p>
+  </div>
 
 <% end %>

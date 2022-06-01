@@ -1,14 +1,17 @@
+<div class="ms-2 mb-3">
 <h1>New Place</h1>
+</div>
 
 <% if @current_user %>
   <%= form_with :model => @place do |form| %>
-    <p>
-      <%= form.label "name" %>
-      <%= form.text_field "name" %>
-    </p>
-    <p>
-      <%= form.submit %>
-    </p>
+    <div class="ms-2 mb-3">
+      
+      <%= form.label "name", class: "form-label" %>
+      <%= form.text_field "name",class: "form-control" %>
+    </div>
+    <div class="ms-2 mb-3">
+      <%= form.submit "Submit Place", class: "btn btn-primary" %>
+    </div>
   <% end %>
 <% else %>
   You must first <a href="/login">login</a> to post.
