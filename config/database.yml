@@ -22,4 +22,7 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  adapter: postgresql
+  database: elee-travel-journal-app_production
+  username: elee-travel-journal-app
+  password: <%= ENV["ELEE-TRAVEL-JOURNAL-APP_DATABASE_PASSWORD"] %>
