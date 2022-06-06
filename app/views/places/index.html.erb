@@ -2,6 +2,10 @@
 <h1>Places</h1>
 </div>
 
+  <div class="ms-2 mb-3">
+    <a href="/places/new" class="btn btn-primary">New place</a>
+  </div>
+
 <% if @current_user %>
 
   <ul>
@@ -12,14 +16,12 @@
     <% end %>
   </ul>
 
-  <div class="ms-2 mb-3">
-    <a href="/places/new" class="btn btn-primary">New place</a>
-  </div>
+
 
 <% else %>
 
   <div class="ms-2 mb-3">
-  <p> Please login first to view places </p>
+    <p> Please login first to view places </p>
   </div>
 
 <% end %>
